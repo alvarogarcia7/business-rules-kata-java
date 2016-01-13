@@ -21,6 +21,7 @@ public class PaymentsShould {
 	@Test
 	public void generateDuplicateSlipOnBook(){
 		Payment payment = new Payment();
+		Book book = new Book();
 
 		DuplicateSlip duplicateSlip = payment.pay(book);
 
