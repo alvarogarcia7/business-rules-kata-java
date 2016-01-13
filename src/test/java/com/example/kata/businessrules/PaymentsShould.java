@@ -1,12 +1,12 @@
 package com.example.kata.businessrules;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.nullValue;
+import static org.junit.Assert.assertThat;
 
 public class PaymentsShould {
 
@@ -19,10 +19,11 @@ public class PaymentsShould {
 
 	@Test
 	public void generateSlipOnPhysicalProduct(){
+		PhysicalProduct physicalProduct = new PhysicalProduct();
 
-		Slip slip = payment.payPhysicalProduct();
+		Slip slip = payment.pay(physicalProduct);
 
-		Assert.assertThat(slip, is(not(nullValue())));
+		assertThat(slip, is(not(nullValue())));
 	}
 
 	@Test
@@ -31,6 +32,6 @@ public class PaymentsShould {
 
 		DuplicateSlip duplicateSlip = payment.pay(book);
 
-		Assert.assertThat(duplicateSlip, is(not(nullValue())));
+		assertThat(duplicateSlip, is(not(nullValue())));
 	}
 }

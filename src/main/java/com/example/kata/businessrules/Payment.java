@@ -8,4 +8,8 @@ public class Payment {
 	public DuplicateSlip pay (final Book book) {
 		return new DuplicateSlip();
 	}
+
+	public Slip pay (final PhysicalProduct physicalProduct) {
+		return payPhysicalProduct();
+	}
 }
