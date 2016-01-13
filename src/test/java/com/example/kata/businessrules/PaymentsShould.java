@@ -1,15 +1,18 @@
 package com.example.kata.businessrules;
 
-import javafx.beans.binding.Bindings;
 import org.junit.Assert;
 import org.junit.Test;
+
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
+import static org.hamcrest.Matchers.nullValue;
 
 public class PaymentsShould {
 
 	@Test
-	generateSlipOnPhysicalProduct(){
+	public void generateSlipOnPhysicalProduct(){
 		Payment payment = new Payment();
 		Slip slip = payment.payPhysicalProduct();
-		Assert.assertThat(slip, Bindings.isNotNull());
+		Assert.assertThat(slip, is(not(nullValue())));
 	}
 }
