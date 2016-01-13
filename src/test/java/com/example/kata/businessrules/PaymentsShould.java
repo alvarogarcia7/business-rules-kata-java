@@ -12,7 +12,9 @@ public class PaymentsShould {
 	@Test
 	public void generateSlipOnPhysicalProduct(){
 		Payment payment = new Payment();
+
 		Slip slip = payment.payPhysicalProduct();
+		
 		Assert.assertThat(slip, is(not(nullValue())));
 	}
 }
