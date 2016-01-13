@@ -6,6 +6,6 @@ public class Payment {
 	}
 
 	public DuplicateSlip pay (final Book book) {
-		return null;
+		return new DuplicateSlip();
 	}
 }
