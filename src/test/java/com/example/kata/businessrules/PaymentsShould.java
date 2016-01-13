@@ -1,6 +1,7 @@
 package com.example.kata.businessrules;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.is;
@@ -9,9 +10,15 @@ import static org.hamcrest.Matchers.nullValue;
 
 public class PaymentsShould {
 
+	Payment payment;
+
+	@Before
+	public void setUp () throws Exception {
+		payment = new Payment();
+	}
+
 	@Test
 	public void generateSlipOnPhysicalProduct(){
-		Payment payment = new Payment();
 
 		Slip slip = payment.payPhysicalProduct();
 
@@ -20,7 +27,6 @@ public class PaymentsShould {
 
 	@Test
 	public void generateDuplicateSlipOnBook(){
-		Payment payment = new Payment();
 		Book book = new Book();
 
 		DuplicateSlip duplicateSlip = payment.pay(book);
