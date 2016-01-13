@@ -14,7 +14,16 @@ public class PaymentsShould {
 		Payment payment = new Payment();
 
 		Slip slip = payment.payPhysicalProduct();
-		
+
 		Assert.assertThat(slip, is(not(nullValue())));
+	}
+
+	@Test
+	public void generateDuplicateSlipOnBook(){
+		Payment payment = new Payment();
+
+		DuplicateSlip duplicateSlip = payment.pay(book);
+
+		Assert.assertThat(duplicateSlip, is(not(nullValue())));
 	}
 }
