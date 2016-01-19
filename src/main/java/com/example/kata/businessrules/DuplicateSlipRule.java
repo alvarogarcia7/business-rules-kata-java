@@ -4,7 +4,7 @@ public class DuplicateSlipRule {
 	private final Book book;
 	private final Payment payment;
 
-	private Slip result;
+	private DuplicateSlip result;
 
 	public DuplicateSlipRule (final Book book, final Payment payment) {
 		this.book = book;
@@ -12,10 +12,10 @@ public class DuplicateSlipRule {
 	}
 
 	public void apply () {
-		result = new Slip();
+		result = new DuplicateSlip();
 	}
 
-	public Slip result () {
+	public DuplicateSlip result () {
 		return result;
 	}
 }
