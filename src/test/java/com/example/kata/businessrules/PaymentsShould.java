@@ -53,7 +53,7 @@ public class PaymentsShould {
 	}
 
 	@Test
-	public void apply_any_rule () {
+	public void apply_any_void_rule () {
 		final VoidRule voidRule = Mockito.mock(VoidRule.class);
 
 		paymentProcessor.process(voidRule);
