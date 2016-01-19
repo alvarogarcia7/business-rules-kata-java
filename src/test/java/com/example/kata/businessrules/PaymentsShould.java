@@ -23,7 +23,7 @@ public class PaymentsShould {
 
 	@Before
 	public void setUp () throws Exception {
-		paymentProcessor = new PaymentProcessor();
+		paymentProcessor = new PaymentProcessor(new RuleProcessor());
 	}
 
 	@Test
