@@ -35,6 +35,7 @@ public class PaymentProcessor {
 	}
 
 	public <T> T process (final ResultingRule<T> rule) {
-		return null;
+		rule.apply();
+		return rule.result();
 	}
 }
