@@ -1,6 +1,6 @@
 package com.example.kata.businessrules;
 
-public class Payment {
+public class PaymentProcessor {
 
 	public DuplicateSlip pay (final Book book) {
 		return new DuplicateSlip();

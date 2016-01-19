@@ -10,18 +10,18 @@ import static org.junit.Assert.assertThat;
 
 public class PaymentsShould {
 
-	Payment payment;
+	PaymentProcessor paymentProcessor;
 
 	@Before
 	public void setUp () throws Exception {
-		payment = new Payment();
+		paymentProcessor = new PaymentProcessor();
 	}
 
 	@Test
 	public void generateSlipOnPhysicalProduct(){
 		PhysicalProduct physicalProduct = new PhysicalProduct();
 
-		Slip slip = payment.pay(physicalProduct);
+		Slip slip = paymentProcessor.pay(physicalProduct);
 
 		assertThat(slip, is(not(nullValue())));
 	}
@@ -30,7 +30,7 @@ public class PaymentsShould {
 	public void generateDuplicateSlipOnBook(){
 		Book book = new Book();
 
-		DuplicateSlip duplicateSlip = payment.pay(book);
+		DuplicateSlip duplicateSlip = paymentProcessor.pay(book);
 
 		assertThat(duplicateSlip, is(not(nullValue())));
 	}
