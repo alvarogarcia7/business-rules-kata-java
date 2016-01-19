@@ -2,12 +2,14 @@ package com.example.kata.businessrules;
 
 import com.example.kata.businessrules.membership.Membership;
 import com.example.kata.businessrules.payment.PaymentProcessor;
+import com.example.kata.businessrules.rule.Rule;
 import com.example.kata.businessrules.slip.Book;
 import com.example.kata.businessrules.slip.DuplicateSlip;
 import com.example.kata.businessrules.slip.PhysicalProduct;
 import com.example.kata.businessrules.slip.Slip;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
@@ -50,5 +52,12 @@ public class PaymentsShould {
 		assertThat(membership.isActive(), is(true));
 	}
 
+	@Test
+	public void apply_any_rule () {
+		final Rule rule = Mockito.mock(Rule.class);
 
+		paymentProcessor.process(rule);
+
+		Mockito.verify(rule).apply();
+	}
 }
