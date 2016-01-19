@@ -37,9 +37,9 @@ public class PaymentsShould {
 
 	@Test
 	public void activateMembership(){
-		Membership book = new Membership();
+		Membership membership = new Membership();
 
-		Membership membership = paymentProcessor.pay(membership);
+		membership = paymentProcessor.pay(membership);
 
 		assertThat(membership.isActive(), is(true));
 	}

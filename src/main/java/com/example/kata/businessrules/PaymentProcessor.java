@@ -9,4 +9,9 @@ public class PaymentProcessor {
 	public Slip pay (final PhysicalProduct physicalProduct) {
 		return new Slip();
 	}
+
+	public Membership pay (final Membership membership) {
+		membership.activate();
+		return membership;
+	}
 }
