@@ -1,13 +1,13 @@
 package com.example.kata.businessrules.payment;
 
 import com.example.kata.businessrules.membership.Membership;
+import com.example.kata.businessrules.membership.MembershipActivationRule;
 import com.example.kata.businessrules.rule.ResultingRule;
 import com.example.kata.businessrules.rule.VoidRule;
 import com.example.kata.businessrules.slip.Book;
+import com.example.kata.businessrules.slip.DuplicateSlip;
 import com.example.kata.businessrules.slip.DuplicateSlipRule;
 import com.example.kata.businessrules.slip.GenerateSlipRule;
-import com.example.kata.businessrules.membership.MembershipActivationRule;
-import com.example.kata.businessrules.slip.DuplicateSlip;
 import com.example.kata.businessrules.slip.PhysicalProduct;
 import com.example.kata.businessrules.slip.Slip;
 
