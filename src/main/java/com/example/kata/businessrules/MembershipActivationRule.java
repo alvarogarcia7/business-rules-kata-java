@@ -1,6 +1,6 @@
 package com.example.kata.businessrules;
 
-public class MembershipActivationRule {
+public class MembershipActivationRule implements Rule {
 	private final Membership membership;
 	private final Payment payment;
 
@@ -9,6 +9,7 @@ public class MembershipActivationRule {
 		this.payment = payment;
 	}
 
+	@Override
 	public void apply () {
 		membership.activate();
 	}

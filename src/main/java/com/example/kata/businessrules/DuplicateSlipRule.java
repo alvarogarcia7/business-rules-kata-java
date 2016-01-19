@@ -1,6 +1,6 @@
 package com.example.kata.businessrules;
 
-public class DuplicateSlipRule {
+public class DuplicateSlipRule implements Rule{
 	private final Book book;
 	private final Payment payment;
 
@@ -11,6 +11,7 @@ public class DuplicateSlipRule {
 		this.payment = payment;
 	}
 
+	@Override
 	public void apply () {
 		result = new DuplicateSlip();
 	}

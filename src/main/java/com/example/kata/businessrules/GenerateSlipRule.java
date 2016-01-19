@@ -1,6 +1,6 @@
 package com.example.kata.businessrules;
 
-public class GenerateSlipRule {
+public class GenerateSlipRule implements Rule {
 	private final PhysicalProduct physicalProduct;
 	private final Payment payment;
 	private Slip result;
@@ -10,6 +10,7 @@ public class GenerateSlipRule {
 		this.payment = payment;
 	}
 
+	@Override
 	public void apply () {
 		result = new Slip();
 	}
