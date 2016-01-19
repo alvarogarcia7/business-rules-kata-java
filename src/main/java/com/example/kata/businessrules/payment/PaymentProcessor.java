@@ -3,8 +3,6 @@ package com.example.kata.businessrules.payment;
 import com.example.kata.businessrules.RuleProcessor;
 import com.example.kata.businessrules.membership.Membership;
 import com.example.kata.businessrules.membership.MembershipActivationRule;
-import com.example.kata.businessrules.rule.ResultingRule;
-import com.example.kata.businessrules.rule.VoidRule;
 import com.example.kata.businessrules.slip.Book;
 import com.example.kata.businessrules.slip.DuplicateSlip;
 import com.example.kata.businessrules.slip.DuplicateSlipRule;
@@ -32,13 +30,5 @@ public class PaymentProcessor {
 	public Membership pay (final Membership membership) {
 		ruleProcessor.process(new MembershipActivationRule(membership, new Payment()));
 		return membership;
-	}
-
-	public void process (final VoidRule voidRule) {
-		ruleProcessor.process(voidRule);
-	}
-
-	public <T> T process (final ResultingRule<T> rule) {
-		return ruleProcessor.process(rule);
 	}
 }
