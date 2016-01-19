@@ -2,6 +2,7 @@ package com.example.kata.businessrules;
 
 import com.example.kata.businessrules.membership.Membership;
 import com.example.kata.businessrules.payment.PaymentProcessor;
+import com.example.kata.businessrules.rule.ResultingRule;
 import com.example.kata.businessrules.rule.VoidRule;
 import com.example.kata.businessrules.slip.Book;
 import com.example.kata.businessrules.slip.DuplicateSlip;
@@ -59,5 +60,15 @@ public class PaymentsShould {
 		paymentProcessor.process(voidRule);
 
 		Mockito.verify(voidRule).apply();
+	}
+
+	@Test
+	public void apply_any_resulting_rule () {
+		final ResultingRule voidRule = Mockito.mock(ResultingRule.class);
+
+		paymentProcessor.process(voidRule);
+
+		Mockito.verify(voidRule).apply();
+		Mockito.verify(voidRule).result();
 	}
 }
