@@ -1,4 +1,8 @@
-package com.example.kata.businessrules;
+package com.example.kata.businessrules.rule;
+
+import com.example.kata.businessrules.Payment;
+import com.example.kata.businessrules.PhysicalProduct;
+import com.example.kata.businessrules.Slip;
 
 public class GenerateSlipRule implements Rule {
 	private final PhysicalProduct physicalProduct;

@@ -1,4 +1,8 @@
-package com.example.kata.businessrules;
+package com.example.kata.businessrules.rule;
+
+import com.example.kata.businessrules.Book;
+import com.example.kata.businessrules.DuplicateSlip;
+import com.example.kata.businessrules.Payment;
 
 public class DuplicateSlipRule implements Rule{
 	private final Book book;

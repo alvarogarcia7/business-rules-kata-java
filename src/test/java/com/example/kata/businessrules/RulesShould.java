@@ -1,5 +1,8 @@
 package com.example.kata.businessrules;
 
+import com.example.kata.businessrules.rule.DuplicateSlipRule;
+import com.example.kata.businessrules.rule.GenerateSlipRule;
+import com.example.kata.businessrules.rule.MembershipActivationRule;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.is;
