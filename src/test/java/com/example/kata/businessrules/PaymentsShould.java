@@ -34,4 +34,13 @@ public class PaymentsShould {
 
 		assertThat(duplicateSlip, is(not(nullValue())));
 	}
+
+	@Test
+	public void activateMembership(){
+		Membership book = new Membership();
+
+		Membership membership = paymentProcessor.pay(membership);
+
+		assertThat(membership.isActive(), is(true));
+	}
 }
