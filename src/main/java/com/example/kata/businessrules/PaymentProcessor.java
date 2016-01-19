@@ -9,7 +9,9 @@ public class PaymentProcessor {
 	}
 
 	public Slip pay (final PhysicalProduct physicalProduct) {
-		return new Slip();
+		final GenerateSlipRule rule = new GenerateSlipRule(physicalProduct, new Payment());
+		rule.apply();
+		return rule.result();
 	}
 
 	public Membership pay (final Membership membership) {
