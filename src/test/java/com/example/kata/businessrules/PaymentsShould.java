@@ -2,15 +2,12 @@ package com.example.kata.businessrules;
 
 import com.example.kata.businessrules.membership.Membership;
 import com.example.kata.businessrules.payment.PaymentProcessor;
-import com.example.kata.businessrules.rule.ResultingRule;
-import com.example.kata.businessrules.rule.VoidRule;
 import com.example.kata.businessrules.slip.Book;
 import com.example.kata.businessrules.slip.DuplicateSlip;
 import com.example.kata.businessrules.slip.PhysicalProduct;
 import com.example.kata.businessrules.slip.Slip;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
@@ -51,24 +48,5 @@ public class PaymentsShould {
 		membership = paymentProcessor.pay(membership);
 
 		assertThat(membership.isActive(), is(true));
-	}
-
-	@Test
-	public void apply_any_void_rule () {
-		final VoidRule voidRule = Mockito.mock(VoidRule.class);
-
-		paymentProcessor.process(voidRule);
-
-		Mockito.verify(voidRule).apply();
-	}
-
-	@Test
-	public void apply_any_resulting_rule () {
-		final ResultingRule voidRule = Mockito.mock(ResultingRule.class);
-
-		paymentProcessor.process(voidRule);
-
-		Mockito.verify(voidRule).apply();
-		Mockito.verify(voidRule).result();
 	}
 }
