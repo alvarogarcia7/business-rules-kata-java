@@ -49,4 +49,6 @@ public class PaymentsShould {
 
 		assertThat(membership.isActive(), is(true));
 	}
+
+
 }
