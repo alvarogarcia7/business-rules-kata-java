@@ -10,8 +10,8 @@ public class RulesShould {
 	@Test
 	public void activate_a_membership () {
 		Membership membership = new Membership();
-
 		MembershipActivationRule rule = new MembershipActivationRule(membership, new Payment());
+		
 		rule.apply();
 
 		assertThat(membership.isActive(), is(true));
