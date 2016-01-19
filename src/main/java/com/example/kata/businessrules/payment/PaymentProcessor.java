@@ -14,15 +14,11 @@ import com.example.kata.businessrules.slip.Slip;
 public class PaymentProcessor {
 
 	public DuplicateSlip pay (final Book book) {
-		final DuplicateSlipRule rule = new DuplicateSlipRule(book, new Payment());
-		rule.apply();
-		return rule.result();
+		return process(new DuplicateSlipRule(book, new Payment()));
 	}
 
 	public Slip pay (final PhysicalProduct physicalProduct) {
-		final GenerateSlipRule rule = new GenerateSlipRule(physicalProduct, new Payment());
-		rule.apply();
-		return rule.result();
+		return process(new GenerateSlipRule(physicalProduct, new Payment()));
 	}
 
 	public Membership pay (final Membership membership) {
