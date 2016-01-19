@@ -25,7 +25,7 @@ public class PaymentProcessor {
 	}
 
 	public Membership pay (final Membership membership) {
-		new MembershipActivationRule(membership, new Payment()).apply();
+		process(new MembershipActivationRule(membership, new Payment()));
 		return membership;
 	}
 
