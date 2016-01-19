@@ -28,4 +28,14 @@ public class RulesShould {
 
 		assertThat(rule.result(), is(not(nullValue())));
 	}
+
+	@Test
+	public void generate_slip_for_a_physical_product(){
+		PhysicalProduct physicalProduct = new PhysicalProduct();
+		GenerateSlipRule rule= new GenerateSlipRule(physicalProduct, new Payment());
+
+		rule.apply();
+
+		assertThat(rule.result(), is(not(nullValue())));
+	}
 }
