@@ -1,8 +1,12 @@
 package com.example.kata.businessrules;
 
-import com.example.kata.businessrules.rule.DuplicateSlipRule;
-import com.example.kata.businessrules.rule.GenerateSlipRule;
-import com.example.kata.businessrules.rule.MembershipActivationRule;
+import com.example.kata.businessrules.membership.Membership;
+import com.example.kata.businessrules.payment.Payment;
+import com.example.kata.businessrules.slip.Book;
+import com.example.kata.businessrules.slip.DuplicateSlipRule;
+import com.example.kata.businessrules.slip.GenerateSlipRule;
+import com.example.kata.businessrules.membership.MembershipActivationRule;
+import com.example.kata.businessrules.slip.PhysicalProduct;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.is;

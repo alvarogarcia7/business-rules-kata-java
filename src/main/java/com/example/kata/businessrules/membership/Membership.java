@@ -1,4 +1,4 @@
-package com.example.kata.businessrules;
+package com.example.kata.businessrules.membership;
 
 public class Membership {
 	private boolean active;

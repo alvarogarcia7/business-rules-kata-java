@@ -1,5 +1,11 @@
 package com.example.kata.businessrules;
 
+import com.example.kata.businessrules.membership.Membership;
+import com.example.kata.businessrules.payment.PaymentProcessor;
+import com.example.kata.businessrules.slip.Book;
+import com.example.kata.businessrules.slip.DuplicateSlip;
+import com.example.kata.businessrules.slip.PhysicalProduct;
+import com.example.kata.businessrules.slip.Slip;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,7 +1,7 @@
-package com.example.kata.businessrules.rule;
+package com.example.kata.businessrules.membership;
 
-import com.example.kata.businessrules.Membership;
-import com.example.kata.businessrules.Payment;
+import com.example.kata.businessrules.payment.Payment;
+import com.example.kata.businessrules.rule.Rule;
 
 public class MembershipActivationRule implements Rule {
 	private final Membership membership;
