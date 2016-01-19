@@ -1,9 +1,9 @@
 package com.example.kata.businessrules.slip;
 
 import com.example.kata.businessrules.payment.Payment;
-import com.example.kata.businessrules.rule.Rule;
+import com.example.kata.businessrules.rule.ResultingRule;
 
-public class DuplicateSlipRule implements Rule {
+public class DuplicateSlipRule implements ResultingRule {
 	private final Book book;
 	private final Payment payment;
 
@@ -19,6 +19,7 @@ public class DuplicateSlipRule implements Rule {
 		result = new DuplicateSlip();
 	}
 
+	@Override
 	public DuplicateSlip result () {
 		return result;
 	}

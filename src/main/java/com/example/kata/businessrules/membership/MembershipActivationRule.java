@@ -1,9 +1,9 @@
 package com.example.kata.businessrules.membership;
 
 import com.example.kata.businessrules.payment.Payment;
-import com.example.kata.businessrules.rule.Rule;
+import com.example.kata.businessrules.rule.VoidRule;
 
-public class MembershipActivationRule implements Rule {
+public class MembershipActivationRule implements VoidRule {
 	private final Membership membership;
 	private final Payment payment;
 

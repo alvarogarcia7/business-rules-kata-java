@@ -1,5 +1,5 @@
 package com.example.kata.businessrules.rule;
 
-public interface Rule {
+public interface VoidRule {
 	void apply ();
 }

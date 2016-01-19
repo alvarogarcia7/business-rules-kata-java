@@ -1,7 +1,7 @@
 package com.example.kata.businessrules.payment;
 
 import com.example.kata.businessrules.membership.Membership;
-import com.example.kata.businessrules.rule.Rule;
+import com.example.kata.businessrules.rule.VoidRule;
 import com.example.kata.businessrules.slip.Book;
 import com.example.kata.businessrules.slip.DuplicateSlipRule;
 import com.example.kata.businessrules.slip.GenerateSlipRule;
@@ -29,7 +29,7 @@ public class PaymentProcessor {
 		return membership;
 	}
 
-	public void process (final Rule rule) {
-		rule.apply();
+	public void process (final VoidRule voidRule) {
+		voidRule.apply();
 	}
 }
