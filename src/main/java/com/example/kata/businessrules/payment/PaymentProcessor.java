@@ -30,6 +30,6 @@ public class PaymentProcessor {
 	}
 
 	public void process (final Rule rule) {
-
+		rule.apply();
 	}
 }
